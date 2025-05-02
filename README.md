@@ -3,9 +3,9 @@
 ## Overview
 
 This is a Model Context Protocol (MCP) server implementation built with .NET 9.0. 
+Both STDIO and SSE versions. 
 
-Able to ask questions about Colors
-
+Able to ask questions about Colors.
 
 ## Configuration STDIO
 
@@ -13,6 +13,7 @@ Able to ask questions about Colors
 
 Filename:  .vscode\mcp.json
 
+```JSON
 {
     "servers": {
         "colorsserver": {
@@ -26,25 +27,29 @@ Filename:  .vscode\mcp.json
         }
     }
 }
-
+```
 
 ## Configuration SSE
 
 ### Build Docker file 
 
+```
 cd <projectroot>
 docker build -f colorsmcpsse/Dockerfile -t colorsmcpsse:latest .
 docker images
+```
 
 ### Run Docker file 
 
+```
 docker run -p 3000:8080 -p 3001:8081 -d colorsmcpsse:latest
-
+```
 
 ### VSCode config
 
 Filename:  .vscode\mcp.json
- 
+
+ ```JSON
 {
     "servers": {
         "colorsserver": {
@@ -53,10 +58,11 @@ Filename:  .vscode\mcp.json
         }
     }
 }
-
+```
 
 ## Test
 
+```
 npx @modelcontextprotocol/inspector
-
+```
 
