@@ -7,6 +7,8 @@ Both STDIO and SSE versions.
 
 Able to ask questions about Colors.
 
+![screenshot](./docs/scrn1.png)
+
 ## Configuration STDIO
 
 ### VSCode config 
