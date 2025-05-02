@@ -68,3 +68,4 @@ Filename:  .vscode\mcp.json
 npx @modelcontextprotocol/inspector
 ```
 
+![screenshot](./docs/scrn2.png)
