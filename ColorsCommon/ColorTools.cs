@@ -29,7 +29,7 @@ public sealed class ColorsTools
     }
 
 
-    [McpServerTool, Description("Get a colors by name.")]
+    [McpServerTool, Description("Get a color by name.")]
     public async Task<string> GetColor([Description("The name of the color to get details for")] string name)
     {
         var colors = await colorsService.GetColors(name);
