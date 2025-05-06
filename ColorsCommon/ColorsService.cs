@@ -43,7 +43,7 @@ public class ColorsService
 public partial class Colors
 {
     public string? Name { get; set; } 
-    public string? Hex { get; set; }   
+    public string? Hexcode { get; set; }   
     public string? RGB { get; set; }   
     public List<string>? Families { get; set; }  
 }
