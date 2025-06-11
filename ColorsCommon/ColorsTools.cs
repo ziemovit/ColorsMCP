@@ -14,23 +14,23 @@ public sealed class ColorsTools
         this.colorsService = colorsService;
     }
 
-    [McpServerTool, Description("Get a list of all colors.")]
+    [McpServerTool, Description(ColorsInfo.GetAllColorsToolDescription)]
     public async Task<string> GetAllColors()
     {
         var colors = await colorsService.GetColors();
         return JsonSerializer.Serialize(colors, ColorsContext.Default.ListColors);
     }
 
-    [McpServerTool, Description("Get a list of colors by family group.")]
-    public async Task<string> GetColorByFamily([Description("Get a list of colors that belong to a family group")] string family)
+    [McpServerTool, Description(ColorsInfo.GetColorsByFamilyToolDescription)]    
+    public async Task<string> GetColorByFamily([Description(ColorsInfo.GetColorsByFamilyParamFamilyDescription)] string family)
     {
         var colors = await colorsService.GetColorsByFamily(family);
         return JsonSerializer.Serialize(colors, ColorsContext.Default.ListColors);
     }
 
 
-    [McpServerTool, Description("Get a color by name.")]
-    public async Task<string> GetColor([Description("The name of the color to get details for")] string name)
+    [McpServerTool, Description(ColorsInfo.GetColorToolDescription)]
+    public async Task<string> GetColor([Description(ColorsInfo.GetColorParamNameDescription)] string name)
     {
         var colors = await colorsService.GetColors(name);
         return JsonSerializer.Serialize(colors, ColorsContext.Default.Colors);

@@ -3,7 +3,10 @@
 ## Overview
 
 This is a Model Context Protocol (MCP) server implementation built with .NET 9.0. 
-Both STDIO and SSE versions. 
+Projects are provided to build:
+- STDIO
+- SSE - Docker Image
+- SSE - Azure Function App
 
 Able to ask questions about Colors.
 
@@ -31,7 +34,7 @@ Filename:  .vscode\mcp.json
 }
 ```
 
-## Configuration SSE
+## Configuration SSE - Docker 
 
 ### Build Docker file 
 
@@ -62,10 +65,45 @@ Filename:  .vscode\mcp.json
 }
 ```
 
+## Configuration SSE - Azure Function App 
+
+### Azure Functions
+
+There is a project to build an Azure Function App.
+
+Note that the Url of the MCP Server will be `http://xxxxx.azurewebsites.net/runtime/webhooks/mcp/sse`.
+
+![screenshot](./docs/scrn2.png)
+
+In addition a key is needed.  This is located on Function App | Keys blade and is callled mcp_extension.
+
+The header for this key is called `x-functions-key`.
+
+![screenshot](./docs/scrn3.png)
+
+### VSCode config
+
+The VS Code config would look like: 
+
+```JSON
+{
+    "servers": {
+        "colorsserver": {
+            "type": "sse",
+            "url": "https://xxxxx.azurewebsites.net//runtime/webhooks/mcp/sse",
+            "headers": {
+                "x-functions-key": "key"
+            }
+        }
+    }
+}
+```
+
+
 ## Test
 
 ```
 npx @modelcontextprotocol/inspector
 ```
 
-![screenshot](./docs/scrn2.png)
+![screenshot](./docs/scrn4.png)
