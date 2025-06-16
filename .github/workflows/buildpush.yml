@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   
 env:
-  IMAGENAME: colorsmcpsse
+  IMAGENAME: colorsmcp-http
    
 jobs:
   app-build:
@@ -40,7 +40,7 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         context: .
-        file: ./ColorsMCPSSE/Dockerfile
+        file: ./ColorsMCP-HTTP/Dockerfile
         platforms: linux/amd64
         push: true
         tags:  >
