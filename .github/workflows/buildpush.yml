@@ -1,4 +1,4 @@
-name: Container Build & Push - ColorsMCPSSE
+name: Container Build & Push - ColorsMCP-HTTP
 on:
   workflow_dispatch:
   
