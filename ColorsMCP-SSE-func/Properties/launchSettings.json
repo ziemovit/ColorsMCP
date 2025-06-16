@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ColorsMCPSSE_func": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7045",
+      "launchBrowser": false
+    }
+  }
+}

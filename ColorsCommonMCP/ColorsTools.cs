@@ -1,8 +1,8 @@
+using ModelContextProtocol.Server;
 using System.ComponentModel;
 using System.Text.Json;
-using ModelContextProtocol.Server;
 
-namespace ColorsCommon;
+namespace ColorsCommonMCP;
 
 [McpServerToolType]
 public sealed class ColorsTools

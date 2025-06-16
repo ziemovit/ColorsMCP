@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using ColorsCommonMCP;
 using Microsoft.Extensions.DependencyInjection;
-using ColorsCommon;
+using Microsoft.Extensions.Hosting;
 
 namespace ColorsMCP
 {

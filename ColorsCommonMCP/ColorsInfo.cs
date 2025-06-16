@@ -1,5 +1,5 @@
 
-namespace ColorsCommon
+namespace ColorsCommonMCP
 {
     public static class ColorsInfo
     {

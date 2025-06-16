@@ -5,7 +5,7 @@
 This is a Model Context Protocol (MCP) server implementation built with .NET 9.0. 
 Projects are provided to build:
 - STDIO
-- SSE - Docker Image
+- Http Streamable - Docker Image
 - SSE - Azure Function App
 
 Able to ask questions about Colors.
@@ -34,20 +34,20 @@ Filename:  .vscode\mcp.json
 }
 ```
 
-## Configuration SSE - Docker 
+## Configuration HTTP - Docker 
 
 ### Build Docker file 
 
 ```
 cd <projectroot>
-docker build -f colorsmcpsse/Dockerfile -t colorsmcpsse:latest .
+docker build -f colorsmcp-http/Dockerfile -t colorsmcp-http:latest .
 docker images
 ```
 
 ### Run Docker file 
 
 ```
-docker run -p 3000:8080 -p 3001:8081 -d colorsmcpsse:latest
+docker run -p 3000:8080 -p 3001:8081 -d colorsmcp-http:latest
 ```
 
 ### VSCode config
@@ -103,6 +103,7 @@ The VS Code config would look like:
 ## Test
 
 ```
+$env:DANGEROUSLY_OMIT_AUTH = 'true'
 npx @modelcontextprotocol/inspector
 ```
 

@@ -1,10 +1,4 @@
-﻿using Microsoft.Extensions.AI;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using ModelContextProtocol.Client;
-using ModelContextProtocol.Protocol.Transport;
-using ModelContextProtocol.Protocol.Types;
-
+﻿using ModelContextProtocol.Client;
 
 namespace MCPClient
 {
@@ -24,8 +18,9 @@ namespace MCPClient
             var clientTransport = new SseClientTransport(new SseClientTransportOptions
             {
                 Name = "ColorsMCP",
-                Endpoint = new Uri("http://localhost:3000/sse")
+                Endpoint = new Uri("http://localhost:3000/")
             });
+
 
             var client = await McpClientFactory.CreateAsync(clientTransport);
 

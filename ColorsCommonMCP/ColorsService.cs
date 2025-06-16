@@ -1,8 +1,7 @@
-using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace ColorsCommon;
+namespace ColorsCommonMCP;
 
 public class ColorsService
 {
@@ -11,7 +10,7 @@ public class ColorsService
     public ColorsService()
     {
         var assembly = typeof(ColorsService).Assembly;
-        using var stream = assembly.GetManifestResourceStream("ColorsCommon.colors.json");
+        using var stream = assembly.GetManifestResourceStream("ColorsCommonMCP.colors.json");
         using var reader = new StreamReader(stream!);
         var json = reader.ReadToEnd();
         colors = JsonSerializer.Deserialize(json, ColorsContext.Default.ListColors) ?? new List<Colors>();

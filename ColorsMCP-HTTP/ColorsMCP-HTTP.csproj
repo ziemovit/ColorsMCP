@@ -11,12 +11,12 @@
 
     <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1-Preview.1" />
-    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="0.1.0-preview.13" />
-    <PackageReference Include="System.Text.Json" Version="9.0.4" />
+    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="0.2.0-preview.3" />
+    <PackageReference Include="System.Text.Json" Version="10.0.0-preview.5.25277.114" />
   </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ColorsCommon\ColorsCommon.csproj" />
+      <ProjectReference Include="..\ColorsCommonMCP\ColorsCommonMCP.csproj" />
     </ItemGroup>
 
 </Project>

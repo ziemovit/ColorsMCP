@@ -21,17 +21,17 @@ RUN apt-get update \
     clang zlib1g-dev
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["ColorsMCPSSE/ColorsMCPSSE.csproj", "ColorsMCPSSE/"]
-COPY ["ColorsCommon/ColorsCommon.csproj", "ColorsCommon/"]
-RUN dotnet restore "./ColorsMCPSSE/ColorsMCPSSE.csproj"
+COPY ["ColorsMCP-HTTP/ColorsMCP-HTTP.csproj", "ColorsMCP-HTTP/"]
+COPY ["ColorsCommonMCP/ColorsCommonMCP.csproj", "ColorsCommonMCP/"]
+RUN dotnet restore "./ColorsMCP-HTTP/ColorsMCP-HTTP.csproj"
 COPY . .
-WORKDIR "/src/ColorsMCPSSE"
-RUN dotnet build "./ColorsMCPSSE.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/ColorsMCP-HTTP"
+RUN dotnet build "./ColorsMCP-HTTP.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./ColorsMCPSSE.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=true
+RUN dotnet publish "./ColorsMCP-HTTP.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=true
 
 # This stage is used as the base for the final stage when launching from VS to support debugging in regular mode (Default when not using the Debug configuration)
 FROM base AS aotdebug
@@ -48,4 +48,4 @@ WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 COPY --from=publish /app/publish .
-ENTRYPOINT ["./ColorsMCPSSE"]
+ENTRYPOINT ["./ColorsMCP-HTTP"]
