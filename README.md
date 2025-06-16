@@ -58,7 +58,7 @@ Filename:  .vscode\mcp.json
 {
     "servers": {
         "colorsserver": {
-            "type": "sse",
+            "type": "http",
             "url": "http://localhost:3000"
         }
     }
