@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorsMCP-SSE-func", "Color
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorsCommonMCP", "ColorsCommonMCP\ColorsCommonMCP.csproj", "{5DFE4A73-1678-307E-100D-CC9A82E0FCA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorsMCP-HTTP-Auth", "ColorsMCP-HTTP-Auth\ColorsMCP-HTTP-Auth.csproj", "{076F73C7-B69C-1771-B199-DC08AE0A7E59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5DFE4A73-1678-307E-100D-CC9A82E0FCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DFE4A73-1678-307E-100D-CC9A82E0FCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DFE4A73-1678-307E-100D-CC9A82E0FCA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{076F73C7-B69C-1771-B199-DC08AE0A7E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{076F73C7-B69C-1771-B199-DC08AE0A7E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{076F73C7-B69C-1771-B199-DC08AE0A7E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{076F73C7-B69C-1771-B199-DC08AE0A7E59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,7 +18,7 @@ namespace MCPClient
             var clientTransport = new SseClientTransport(new SseClientTransportOptions
             {
                 Name = "ColorsMCP",
-                Endpoint = new Uri("http://localhost:3000/")
+                Endpoint = new Uri("https://colorsmcp.azure1.dev/")
             });
 
 
@@ -35,7 +35,15 @@ namespace MCPClient
                 new Dictionary<string, object?>() { ["name"] = "Red" },
                 cancellationToken: CancellationToken.None);
 
-            Console.WriteLine(result.Content.First(c => c.Type == "text").Text);
+            foreach (var textBlock in result.Content.Where(c => c.Type == "text"))
+            {
+                var textProperty = textBlock.GetType().GetProperty("Text");
+                if (textProperty != null)
+                {
+                    Console.WriteLine(textProperty.GetValue(textBlock));
+                }
+            }
+
         }
     }
 }
