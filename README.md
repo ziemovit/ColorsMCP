@@ -15,6 +15,13 @@ Different projects are provided to support:
 - Http Streamable with OAuth authentication/authorization - Docker Image
 - SSE - Azure Function App
 
+## Example 
+
+```text
+I need a palette of four colors from the blue family - plus black ... 
+   please add to colors.html so I can inspect
+```
+
 ![screenshot](./docs/scrn1.png)
 
 ## Configuration STDIO
