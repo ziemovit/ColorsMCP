@@ -399,3 +399,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 /ColorsMCPSSE-func/Properties
+**/appsettings.Development.json
+/ColorsMCP-SSE-func/Properties
