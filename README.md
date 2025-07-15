@@ -3,12 +3,17 @@
 ## Overview
 
 This is a Model Context Protocol (MCP) server implementation built with .NET 9.0. 
-Projects are provided to build:
+
+This can be used to access knowledge about Colors.
+
+More information [https://markharrison.io/doc-mcp](<https://markharrison.io/doc-mcp>)
+
+Different projects are provided to support:
+
 - STDIO
 - Http Streamable - Docker Image
+- Http Streamable with OAuth authentication/authorization - Docker Image
 - SSE - Azure Function App
-
-Able to ask questions about Colors.
 
 ![screenshot](./docs/scrn1.png)
 
