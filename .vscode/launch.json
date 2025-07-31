@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to .NET Functions",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:azureFunctions.pickProcess}"
+        },
+        {
+            "name": "MCPClient",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-MCPClient",
+            "program": "${workspaceFolder}/MCPClient/bin/Debug/net9.0/MCPClient.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/MCPClient",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+    ]
+}

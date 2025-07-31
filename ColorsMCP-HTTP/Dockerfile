@@ -20,7 +20,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     clang zlib1g-dev
 ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
+WORKDIR /src/
 COPY ["ColorsMCP-HTTP/ColorsMCP-HTTP.csproj", "ColorsMCP-HTTP/"]
 COPY ["ColorsCommonMCP/ColorsCommonMCP.csproj", "ColorsCommonMCP/"]
 RUN dotnet restore "./ColorsMCP-HTTP/ColorsMCP-HTTP.csproj"
