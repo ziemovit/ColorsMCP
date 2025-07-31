@@ -1,0 +1,5 @@
+# copilot.yaml
+rules:
+  - Use async/await for all I/O operations
+  - Prefer dependency injection for services
+  - Follow the project’s naming conventions
