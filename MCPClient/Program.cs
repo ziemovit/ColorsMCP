@@ -6,7 +6,7 @@ namespace MCPClient
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("*** MCP Client ***");
+            Console.WriteLine("*** MCP  ddd Client ***");
 
             //var clientTransport = new StdioClientTransport(new StdioClientTransportOptions
             //{
